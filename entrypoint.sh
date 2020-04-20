@@ -1,5 +1,6 @@
 #!/bin/sh -l
 
-git submodule update --init --recursive
-cd /github/workspace/examples/cc26xx/cc26xx-web-demo
-make clean TARGET=srf06-cc26xx BOARD=sensortag/cc2650
+#git submodule update --init --recursive
+#cd /github/workspace/examples/cc26xx/cc26xx-web-demo
+#make clean TARGET=srf06-cc26xx BOARD=sensortag/cc2650
+ls -la
