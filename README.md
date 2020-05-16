@@ -1,21 +1,20 @@
-# Hello world docker action
+# Build Contiki docker action
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+This action builds Contiki projects for specific hardware targets
 
 ## Inputs
 
-### `who-to-greet`
+### `which-project`
 
-**Required** The name of the person to greet. Default `"World"`.
+**Required** Which sample project to build. Default `"cc26xx-web-demo"`.
 
-## Outputs
+### `which-target`
 
-### `time`
-
-The time we greeted you.
+**Required** Which target hardware to build for. Default `"launchpad"`.
 
 ## Example usage
 
-uses: actions/hello-world-docker-action@v1
+uses: actions/action-build-contiki@v2
 with:
-  who-to-greet: 'Mona the Octocat'
+  which-project: 'slip-radio'
+  which-target: 'sensortag'
