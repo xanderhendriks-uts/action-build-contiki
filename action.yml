@@ -1,13 +1,18 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Build Contiki'
+description: 'Build Contiki project for selected hardware'
 inputs:
   which-project:  # id of input
     description: 'Which sample project to build'
     required: true
     default: 'cc26xx-web-demo'
+  which-target:  # id of input
+    description: 'Which target hardware to build for'
+    required: true
+    default: 'launchpad'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.which-project }}
+    - ${{ inputs.which-target }}
